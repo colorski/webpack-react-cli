@@ -53,7 +53,7 @@ module.exports = {
         loader: 'style-loader!css-loader'
       },
       //支持图片(?limit=1024指：如果图片小于1k就会以dataUrl（base64编码）的形式写在脚本里，否则会在输出目录中拷贝一份图片，并以md5值命名，
-      //引用图片的url也会自动改成相应的文件名)
+      //引用图片的url也会自动改成相应的文件名) -- 路径有问题，试试file-loader
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         loader: 'url-loader?limit=1024'

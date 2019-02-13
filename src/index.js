@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import TextView from './components/TextView'
+import App from './components/App'
 
 ReactDOM.render(
-  <TextView text="hello world!" />,
+  <App />,
   document.getElementById('app-ctn')
 )
