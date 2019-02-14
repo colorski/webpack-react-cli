@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './TextView.less'
+import './TextView.css'
 import d from '../data/data';
 import { cube } from '../utils/math';
 import imgOut1 from '../images/imgOut1.png'
