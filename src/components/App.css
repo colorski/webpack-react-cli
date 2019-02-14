@@ -33,13 +33,17 @@
 }
 .main pre {
   padding:10px;
+  margin-top: 0;
   background-color: #f0f0f0;
   border-left: 3px solid #ddd;
 }
 .main pre p {
   line-height: 1.6;
   color: #aaa;
-  font-size: .8rem;
+}
+.main h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 .main hr {
   margin: 1rem 0;

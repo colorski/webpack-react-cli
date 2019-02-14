@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import TextView from './TextView'
 
 export default class UserAdd extends React.Component {
     render (){
@@ -11,6 +12,8 @@ export default class UserAdd extends React.Component {
             </nav>
             <section className="user-block">
             UserAdd
+            <hr />
+            <TextView text="hello world!" />
             </section>
         </main>
     }

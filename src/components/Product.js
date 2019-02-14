@@ -1,4 +1,5 @@
 import React from 'react';
+import TextView from './TextView'
 
 export default class Product extends React.Component {
     render (){
@@ -7,6 +8,8 @@ export default class Product extends React.Component {
             <div>Product</div>
             <hr />
             <span onClick={ goBack }>← Go back</span>
+            <hr />
+            <TextView text="hello world!" />
         </main>
     }
 }

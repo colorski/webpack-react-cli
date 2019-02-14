@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import TextView from './TextView'
 
 export default class UserDetail extends React.Component {
     render (){
@@ -16,6 +17,8 @@ export default class UserDetail extends React.Component {
                 <span onClick={ history.goBack }>← Go back</span>
                 <hr />
                 <span><Link to="/products">Go to Products →</Link></span>
+                <hr />
+                <TextView text="hello world!" />
             </section>
         </main>
     }
