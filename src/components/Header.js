@@ -5,8 +5,8 @@ export default class Header extends React.Component {
     render (){
         return <header>
             <NavLink to="/" exact>Home</NavLink>
-            <NavLink to="/users/list">Users</NavLink>
-            <NavLink to="/products">Products</NavLink>
+            <NavLink to="/users" exact>Users</NavLink>
+            <NavLink to="/products" exact>Products</NavLink>
         </header>
     }
 }

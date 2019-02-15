@@ -12,7 +12,7 @@ export default class Home extends React.Component {
             </pre>
             <hr />
             <h2>react-router-dom</h2>
-            <p><Link to="/users/list">Go to Users page from here.</Link></p>
+            <p><Link to="/users">Go to Users page from here.</Link></p>
             <p><Link to="/users/list/detail/2">Go to User-2 Detail page from here.</Link></p>
             <hr />
             <TextView text="hello world!" />
