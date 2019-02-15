@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "use webpack to build a react production project.",
   "main": "index.js",
+  "sideEffects": false,
   "scripts": {
     "start": "webpack-dev-server",
     "dist": "webpack --mode production",

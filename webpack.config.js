@@ -28,6 +28,9 @@ module.exports = {
     //publicPath: '/build/'
   },
 
+  //仅用于开发环境
+  devtool: 'source-map',
+
   devServer: {
     contentBase: path.join(__dirname, "public/"),//开发服务运行时的文件根目录，index.html在哪路径就到哪，如："/public/"
     historyApiFallback: true,//spa不跳转,history模式的路由需要true
@@ -82,19 +85,20 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin('dist/*.*', {
-        root: __dirname,
-        verbose: true,
-        dry: false
+      root: __dirname,
+      verbose: true,
+      dry: false
     }),
     new HtmlWebpackPlugin({
-        filename: __dirname + "/dist/index.html",
-        template: __dirname + "/public/index.html"
+      title: 'Development',
+      filename: __dirname + "/dist/index.html",
+      template: __dirname + "/public/index.html"
     }),
-    new webpack.BannerPlugin('author: colorski, qq: 290518066, hash: [hash], file: [file]'),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
-    })
+    }),
+    new webpack.BannerPlugin('author: colorski, qq: 290518066, hash: [hash], file: [file]'),
+    new webpack.HotModuleReplacementPlugin(),
   ]
 }
