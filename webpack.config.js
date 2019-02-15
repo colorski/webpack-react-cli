@@ -29,7 +29,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.join(__dirname, "public/"),//开发服务运行时的文件根目录，index.html在哪路径就到哪？如："/public/"
+    contentBase: path.join(__dirname, "public/"),//开发服务运行时的文件根目录，index.html在哪路径就到哪，如："/public/"
     historyApiFallback: true,//spa不跳转,history模式的路由需要true
     host: 'localhost',
     compress: true,//是否启用gzip压缩
