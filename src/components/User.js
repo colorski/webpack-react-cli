@@ -6,17 +6,14 @@ import UserDetail from './UserDetail';
 import UserAdd from './UserAdd';
 
 export default class User extends React.Component {
-    render (){
-        const {match} = this.props;
-        return <main className="main user">
-            <LeftNav />
-            <section className="user-block">
-                <Switch>
-                  <Route path='/users' exact component={UserList} />
-                  <Route path='/add' exact component={UserAdd} />
-                  <Route path='list/detail/:userId' component={UserDetail} />
-                </Switch>
-            </section>
-        </main>
-    }
+  render (){
+    return <main className="main user">
+      <LeftNav />
+      <Switch>
+        <Route path='/users' exact component={UserList} />
+        <Route path='/users/add' component={UserAdd} />
+        <Route path='/users/detail/:userId' component={UserDetail} />
+      </Switch>
+    </main>
+  }
 }
