@@ -15,7 +15,7 @@ export default class Home extends React.Component {
       <p><Link to="/users">Go to Users page from here.</Link></p>
       <p><Link to="/users/detail/2">Go to User-2 Detail page from here.</Link></p>
       <hr />
-      <TextView text="hello world!" />
+      <TextView text="hello world!" sum={2.38} />
     </main>
   }
 }
