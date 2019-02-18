@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
 import User from './User';
@@ -10,7 +10,7 @@ import './App.css';
 
 export default class App extends React.Component {
   render (){
-    return <BrowserRouter>
+    return <HashRouter>
       <div className="app-wrap">
         <Header />
         <Switch>
@@ -21,7 +21,7 @@ export default class App extends React.Component {
         </Switch>
         <Footer version={d.version} />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   }
 }
 

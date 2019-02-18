@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
     
     const { version } = this.props;
     return <div className="footer">
-      <p>footer</p>
+      <p style={{color:'#f00'}}>footer</p>
       <p>version: @{ version }</p>
     </div>
   }

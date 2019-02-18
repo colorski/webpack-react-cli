@@ -3,20 +3,32 @@ The use of react-router@4 - react-router-dom.
 
 ## webpack.config.js
 ```
-问题：
-1.图片路径问题，用url-loader在子页面刷新时，图片路径错误，尝试file-loader？
-2.在此基础上加如插件和其它优化的点
+webpack.config.js
+
+webpack.config.dev.js
+
+webpack.config.prod.js
 
 ```
 ## Plugins
 
+1.UglifyJsPlugin
+
+2.HotModuleReplacementPlugin
+
+3.BannerPlugin
+
+4.html-webpack-plugin
+
+5.clean-webpack-plugin
+
+6.mini-css-extract-plugin
 
 ## Opatimization
 
-
+1.Tree Shaking
 
 ## react-router@4.28.2
-
 
 ### 1.关于二级路径页面刷新404的问题
 
@@ -30,27 +42,6 @@ The use of react-router@4 - react-router-dom.
 一种是修改webpack配置即可（注意现阶段只测试了开发环境）。
 在devSever下增加：historyApiFallback: true,
 在output下增加：publicPath: '/'
-注意：记得配置完重启服务
+注意：记得配置完重启服务，可能还需要服务器端的配置
 
-
-### 2.关于不同页面层级导航选中效果
-
-比如一个用户详情页，上级是用户列表页，再上级是用户总览页；当进入某个用户详情页事，让列表页和总览页都选中；
-只要设计好路径即可。如：
-总览页：/users
-列表页：/users/list
-详情页：/users/list/detail/:id
-注意，在配置route的时候合理使用exact，像这样：
-
-```
-<Switch>
-    <Route path='/' exact component={Home} />
-    <Route path='/products' component={Product} />
-    <Route path='/users/list' exact component={UserList} />
-    <Route path='/users/list/detail/:userId' component={UserDetail} />
-    <Route path='/users/add' component={UserAdd} />
-    <Redirect to='/' />
-</Switch>
-
-```
 

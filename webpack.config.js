@@ -45,7 +45,7 @@ module.exports = {
       dry: false
     }),
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'Development HtmlWebpackPlugin',
       filename: __dirname + "/dist/index.html",
       template: __dirname + "/public/index.html"
     }),

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 export default class UserList extends React.Component {
   render (){
-    console.log(this.props.match)
     return <section className="user-block">
       <div>UserList page</div>
       <ul>
