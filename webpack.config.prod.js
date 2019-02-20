@@ -4,6 +4,7 @@ const merge = require('webpack-merge');
 const webpack = require('webpack');
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = merge(base, {
   mode: "production",
@@ -47,6 +48,14 @@ module.exports = merge(base, {
     }),
     new MiniCssExtractPlugin({
       filename: '[name]_[hash].css',
+    }),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /styles_[0-9a-zA-Z]+\.css/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default', { discardComments: { removeAll: true } }],
+      },
+      canPrint: true
     }),
     new webpack.BannerPlugin('author: colorski, qq: 290518066, hash: [hash], file: [file]'),
   ]
