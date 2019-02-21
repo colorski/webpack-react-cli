@@ -33,6 +33,10 @@ module.exports = merge(base, {
     // }
   },
 
+  optimization: {
+    usedExports: true
+  },
+
   module: {
     rules: [
       {
