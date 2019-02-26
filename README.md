@@ -24,6 +24,8 @@ webpack.config.prod.js
 
 6.mini-css-extract-plugin
 
+7.optimize-css-assets-webpack-plugin
+
 ## Opatimization
 
 1.Tree Shaking
@@ -39,9 +41,9 @@ webpack.config.prod.js
 一种是使用HashRouter,即把BrowserRouter改成HashRouter。
 但是这种方式的路径是这样的：http://localhost:3030/#/users
 
-一种是修改webpack配置即可（注意现阶段只测试了开发环境）。
+一种是修改webpack配置即可。
 在devSever下增加：historyApiFallback: true,
 在output下增加：publicPath: '/'
-注意：记得配置完重启服务，可能还需要服务器端的配置
+注意：配置完重启服务，上线时还需要服务器端的配置
 
 
