@@ -4,7 +4,7 @@ const base = require('./webpack.config.js');
 const merge = require('webpack-merge');
 const path = require('path');
 
-const _port = 8888;
+const _port = 7777;
 
 module.exports = merge(base, {
   mode: "development",
